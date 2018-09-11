@@ -9,6 +9,7 @@ Created on Fri Sep  7 20:48:44 2018
 Aim : primary   : Speech to text generation using deep learning.
     : secondary : To plot wav file into Spectrogram
 
+
 """
 
 
@@ -22,8 +23,10 @@ import matplotlib.pyplot as plt
 
 #reading the  wav file
 sample_rate, samples = wavfile.read('yes3.wav')
+
 #generating values
 frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
+
 
 #consturcting Spectrogram
 plt.pcolormesh(times, frequencies, spectrogram)
@@ -32,6 +35,7 @@ plt.imshow(spectrogram)
 plt.ylabel('Frequency [Hz]')
 plt.xlabel('Time [sec]')
 plt.show()
+
 
 #print values
 print(frequencies)
